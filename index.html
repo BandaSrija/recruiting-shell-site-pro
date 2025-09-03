@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Recruiting Without Limits</title>
+  <meta name="description" content="Minimal shell website for a recruiting concept." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="manifest" href="manifest.webmanifest">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Top Announcement / Placeholder -->
+  <div class="topbar" role="status" aria-live="polite">
+    <span>Beta concept</span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Go to home">
+      <img src="assets/logo-placeholder.svg" alt="" class="brand-mark" />
+      <span class="brand-text">Recruit<span class="accent">∞</span></span>
+    </a>
+
+    <div class="header-actions">
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">
+        <img src="assets/icon-moon.svg" alt="" aria-hidden="true">
+      </button>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+
+    <nav id="site-nav" class="site-nav" aria-label="Primary">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#model" class="nav-link">Model</a>
+      <a href="#community" class="nav-link">Community &amp; AI</a>
+      <a href="#labs" class="nav-link">Labs</a>
+      <a href="#contact" class="nav-link cta">Join Waitlist</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero container" id="home">
+    <div class="hero-media">
+      <img src="assets/hero-placeholder.jpg" alt="Upload your hero image" loading="lazy" />
+    </div>
+    <div class="hero-copy">
+      <h1>Recruiting Without Limits.</h1>
+      <p class="subhead">Speed and Scale.</p>
+      <p class="body">
+        We’re building a new model for recruitment. One that combines revenue sharing, a marketing engine, a competitive broker community, and an AI-driven learning platform. This is recruitment rewritten for the modern era.
+      </p>
+      <div class="hero-actions">
+        <a href="#model" class="button">Explore the Model</a>
+        <a href="#contact" class="button ghost">Get Updates</a>
+      </div>
+      <form id="searchForm" class="search" role="search" aria-label="Semantic search mock">
+        <input id="searchInput" type="search" placeholder="Search roles, pillars, notes…" aria-label="Search" />
+        <button class="icon-btn" type="submit" aria-label="Run search">
+          <img src="assets/icon-search.svg" alt="" aria-hidden="true">
+        </button>
+      </form>
+      <div id="searchResults" class="search-results" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <div class="section-header">
+      <h2>About</h2>
+      <p class="section-kicker">A product slice that hints at scale</p>
+    </div>
+    <div class="container about-grid">
+      <p>Clean, accessible UI and thoughtful component boundaries. This shell demonstrates product thinking: clear IA, responsive grid, and future-ready modules (community, playbooks, semantic search) with a stubbed API layer.</p>
+      <ul>
+        <li>HTML semantics, ARIA labels, focus states</li>
+        <li>Theme system via CSS variables (light/dark)</li>
+        <li>Client-side mock API for waitlist + AI playbooks</li>
+        <li>Performance: lazy images, reduced-motion support</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Key Pillars -->
+  <section class="pillars" id="model">
+    <div class="section-header">
+      <h2>How it works</h2>
+      <p class="section-kicker">Four pillars designed for velocity</p>
+    </div>
+    <div class="grid-4 container" id="pillarCards">
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/img-1-placeholder.jpg" alt="Upload a relevant image" loading="lazy">
+        </div>
+        <h3>Revenue Sharing</h3>
+        <p>Aligned incentives across brokers and partners with transparent splits.</p>
+      </article>
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/img-2-placeholder.jpg" alt="Upload a relevant image" loading="lazy">
+        </div>
+        <h3>Marketing Engine</h3>
+        <p>Always-on campaigns that compound reach without adding headcount.</p>
+      </article>
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/img-3-placeholder.jpg" alt="Upload a relevant image" loading="lazy">
+        </div>
+        <h3>Broker Community</h3>
+        <p>A curated, competitive network that rewards quality and speed.</p>
+      </article>
+      <article class="card">
+        <div class="card-media">
+          <img src="assets/img-4-placeholder.jpg" alt="Upload a relevant image" loading="lazy">
+        </div>
+        <h3>AI Learning Platform</h3>
+        <p>Onboarding, playbooks, and search augmented by AI for faster placements.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Community & AI (future iteration mock) -->
+  <section class="community" id="community">
+    <div class="section-header">
+      <h2>Community &amp; AI (Next)</h2>
+      <p class="section-kicker">A glimpse of upcoming modules</p>
+    </div>
+
+    <div class="grid-3 container">
+      <article class="module">
+        <div class="module-head">
+          <img src="assets/icon-community.svg" alt="" aria-hidden="true">
+          <h3>Community Hub</h3>
+        </div>
+        <p>Profiles, referrals, leaderboards. Start with a read-only directory; graduate to invite-only reputation.</p>
+        <button class="chip" data-demo="community">View mock</button>
+      </article>
+
+      <article class="module">
+        <div class="module-head">
+          <img src="assets/icon-ai.svg" alt="" aria-hidden="true">
+          <h3>AI Playbooks</h3>
+        </div>
+        <p>Guided flows for sourcing, outreach, and screening. Upload a JD and generate an action plan.</p>
+        <button class="chip" data-demo="playbooks">Generate example</button>
+      </article>
+
+      <article class="module">
+        <div class="module-head">
+          <img src="assets/icon-search.svg" alt="" aria-hidden="true">
+          <h3>Semantic Search</h3>
+        </div>
+        <p>Bring-your-own data; search across roles, candidates, and notes using embeddings.</p>
+        <button class="chip" data-demo="search">Try a query</button>
+      </article>
+    </div>
+  </section>
+
+  <!-- Labs: AI Playbook Generator -->
+  <section id="labs" class="labs">
+    <div class="section-header">
+      <h2>Labs</h2>
+      <p class="section-kicker">Mock AI, real UX</p>
+    </div>
+
+    <div class="container labs-grid">
+      <form id="playbookForm" class="playbook-form" onsubmit="event.preventDefault(); generatePlaybook()">
+        <label for="roleInput" class="sr-only">Role</label>
+        <input id="roleInput" type="text" required placeholder="e.g., Senior Backend Engineer (Go, GCP)" />
+        <button class="button" type="submit">Generate Playbook</button>
+        <label class="checkbox">
+          <input id="juniorMode" type="checkbox" /> Tailor for junior candidates
+        </label>
+      </form>
+      <div id="playbookOutput" class="playbook-output" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <!-- Minimal Contact -->
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="contact-inner container">
+      <h2 id="contact-title">Be first to know</h2>
+      <form class="contact-form" id="waitlistForm">
+        <label class="sr-only" for="email">Email</label>
+        <input id="email" type="email" placeholder="you@company.com" required />
+        <button class="button" type="submit">Join Waitlist</button>
+        <p class="form-note" role="status" aria-live="polite"></p>
+      </form>
+      <p class="tiny-note">This uses a client-side <code>mock API</code>. Swap it for a real endpoint when ready.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Recruiting Without Limits</p>
+    <div class="footer-actions">
+      <a href="#" class="foot-link">Privacy</a>
+      <a href="#" class="foot-link">Terms</a>
+    </div>
+  </footer>
+</body>
+</html>
