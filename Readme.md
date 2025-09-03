@@ -30,6 +30,14 @@ recruiting-shell-site/
 ├── sw.js # Service worker (offline support)
 └── manifest.webmanifest # PWA manifest
 
+## ⚡ How to Run
+
+### Open directly
+1. Unzip the folder.  
+2. Open `index.html` in any browser.  
+   - Works offline.  
+   - Best for a quick demo.
+
 ## 🔮 Next Steps (if live product)
 
 - Replace mock APIs with serverless endpoints (e.g., Supabase/Firebase).
